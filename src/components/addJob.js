@@ -1,8 +1,9 @@
 import React from "react";
+//delete styles and do it straightforward
 import styles from "../comp_styles/addJob.css";
-import { connect } from "react-redux";
+// import { connect } from "react-redux"; TAKE OUT
 
-export class addJob extends React.Component {
+export class AddJob extends React.Component {
 
     constructor(props) {
       super(props)
@@ -17,7 +18,7 @@ export class addJob extends React.Component {
         cons:"",
         validateDisplay: false
       }
-      this.handleSubmit = this.handleSubmit.bind(this)
+      // this.handleSubmit = this.handleSubmit.bind(this)
     }
   
     handleInput(event, key) {
@@ -27,31 +28,31 @@ export class addJob extends React.Component {
     }
   
   
-    handleSubmit(event) {
-      event.preventDefault()
-      if (this.state.job.trim() === "") {
-        this.showValidator()
-      } else {
-        this.props.dispatch(job(this.state));
-        this.props.toggleForm()
-        this.setState = {
-            job: "",
-            company: "",
-            stage: "",
-            status:"",
-            date:"",
-            comp:"",
-            pros:"",
-            cons:"",
-        }
-      }
-    }
+    // handleSubmit(event) {
+    //   event.preventDefault()
+    //   if (this.state.job.trim() === "") {
+    //     this.showValidator()
+    //   } else {
+    //     this.props.dispatch(job(this.state));
+    //     this.props.toggleForm()
+    //     this.setState = {
+    //         job: "",
+    //         company: "",
+    //         stage: "",
+    //         status:"",
+    //         date:"",
+    //         comp:"",
+    //         pros:"",
+    //         cons:"",
+    //     }
+    //   }
+    // }
   
-    showValidator() {
-      this.setState({
-        validateDisplay: !this.state.validateDisplay
-      })
-    }
+    // showValidator() {
+    //   this.setState({
+    //     validateDisplay: !this.state.validateDisplay
+    //   })
+    // }
   
     render() {
   
@@ -177,4 +178,4 @@ export class addJob extends React.Component {
     }
   }
   
-  export default connect(null)(addJob);
+  export default AddJob;

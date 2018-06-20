@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
 import NavBar from './components/navbar';
+import AddJob from './components/addJob';
 
 
 
@@ -17,6 +18,7 @@ class App extends Component {
             <p>
               Under Constructions.
             </p>
+            <AddJob/>
           </div>
       </Router>
     );
@@ -24,3 +26,15 @@ class App extends Component {
 }
 
 export default App;
+
+
+/*
+
+in order to check if comp are working
+  1. import it to your main js which is app,js
+  2. Add it it your code
+
+
+
+
+*/
