@@ -1,0 +1,33 @@
+.navContainer {
+    background:#62256A;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    top: 0;
+  }
+  
+  h1 {
+    color: white;
+    margin-left: 20px;
+    font-size: 40px;
+  }
+  
+  .headerLink {
+      text-decoration: none;
+  }
+  
+  .navLink {
+    text-decoration: none;
+    padding-right: 25px;
+    padding-bottom: 20px;
+    font-size: 18px;
+    color: white;
+  }
+  
+  .navWide {
+    position: absolute;
+    right: 0;
+    top: 20px;
+  }
