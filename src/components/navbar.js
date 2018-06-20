@@ -1,8 +1,9 @@
 import React from "react";
+//if i see line 3 its because I should be importing something
 import { Link } from "react-router-dom";
-import styles from "../comp_styles/NavBar.css"
+import styles from "../comp_styles/navbar.css"
 
-export class NavBar extends React.Component {
+class NavBar extends React.Component {
 
   // logOut() {
   //   this.props.dispatch(logout())
