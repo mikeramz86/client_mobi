@@ -1,7 +1,6 @@
 import React from "react";
 //delete styles and do it straightforward
 import styles from "../comp_styles/addJob.css";
-// import { connect } from "react-redux"; TAKE OUT
 
 export class AddJob extends React.Component {
 
