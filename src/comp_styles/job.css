@@ -1,0 +1,24 @@
+.job {
+    border: 1px solid grey;
+    padding: 15px;
+    margin: 10px;
+    width: 154;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+}
+
+.loginbtn {
+    display: inline-block;
+    width: 25%;
+    border-radius: 2px;
+    padding: 15px;
+    background-color: #21B2A8;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}

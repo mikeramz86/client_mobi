@@ -3,6 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
 import NavBar from './components/navbar';
 import AddJob from './components/addJob';
+import Job from './components/job';
 
 
 
@@ -19,6 +20,7 @@ class App extends Component {
               Under Constructions.
             </p>
             <AddJob/>
+            <Job/>
           </div>
       </Router>
     );

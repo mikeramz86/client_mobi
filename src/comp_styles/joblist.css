@@ -1,0 +1,9 @@
+.result {
+    border: 1px solid grey;
+    padding: 15px;
+    margin: 10px;
+    width: 154;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+}

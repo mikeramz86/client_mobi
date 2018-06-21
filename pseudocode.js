@@ -2,7 +2,21 @@
 //     DASHBOARD
 //=========================================
 
+/*
 
+Company
+Job
+Stage
+Status
+Date
+Comp
+Company
+Pros
+Cons
+
+
+
+*/
 
 //=========================================
 //     JOBS!!!!
