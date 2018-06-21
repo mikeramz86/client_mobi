@@ -9,7 +9,7 @@ class Job extends React.Component {
     return(
         <div className="job">
             <div>Company</div>
-            <div>Jobb</div>
+            <div>Job</div>
             <div>Stage</div>
             <div>Status</div>
             <div>Date</div>
