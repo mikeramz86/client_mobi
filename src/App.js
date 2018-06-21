@@ -4,6 +4,7 @@ import './App.css';
 import NavBar from './components/navbar';
 import AddJob from './components/addJob';
 import Job from './components/job';
+import UpdateJob from './components/updatejob';
 
 
 
@@ -21,6 +22,8 @@ class App extends Component {
             </p>
             <AddJob/>
             <Job/>
+            <UpdateJob/>
+
           </div>
       </Router>
     );

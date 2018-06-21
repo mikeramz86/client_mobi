@@ -8,14 +8,14 @@ class Job extends React.Component {
 
     return(
         <div className="job">
-            <div>Company</div>
-            <div>Job</div>
-            <div>Stage</div>
-            <div>Status</div>
-            <div>Date</div>
-            <div>Comp</div>
-            <div>Pros</div>
-            <div>Cons</div>
+            <div>Company:</div>
+            <div>Job:</div>
+            <div>Stage:</div>
+            <div>Status:</div>
+            <div>Date:</div>
+            <div>Comp:</div>
+            <div>Pros:</div>
+            <div>Cons:</div>
             <button className=" loginbtn">Update</button>
             <button className="loginbtn" type="submit">Delete</button>
             
