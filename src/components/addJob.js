@@ -62,12 +62,13 @@ export class AddJob extends React.Component {
   
   
       return (
-        <div className={styles.formAreaContain}>
+        <div className="job">
           <form
             className={styles.formBox}
             onSubmit={this.handleSubmit}
           >
             {inputRequired}
+            <label>Job:</label>
             <input
               name="job"
               type="text"
@@ -78,9 +79,10 @@ export class AddJob extends React.Component {
               onChange={e => this.handleInput(e, "job")}
               maxLength="25"
             />
-
+  
             <div className={styles.status}>
-                <input
+              <label>Status:</label>
+              <input
                 name="status"
                 type="Active"
                 ref={input => (this.textInput = input)}
@@ -89,11 +91,12 @@ export class AddJob extends React.Component {
                 value={this.state.value}
                 onChange={e => this.handleInput(e, "status")}
                 maxLength="25"
-                />
+              />
             </div>
-
+  
             <div className={styles.stage}>
-                <input
+              <label>Stage:</label>
+              <input
                 name="stage"
                 type="text"
                 ref={input => (this.textInput = input)}
@@ -102,11 +105,12 @@ export class AddJob extends React.Component {
                 value={this.state.value}
                 onChange={e => this.handleInput(e, "stage")}
                 maxLength="25"
-                />
+              />
             </div>
-
+  
             <div className={styles.date}>
-                <input
+              <label>Date:</label>
+              <input
                 name="date"
                 type="text"
                 ref={input => (this.textInput = input)}
@@ -115,11 +119,12 @@ export class AddJob extends React.Component {
                 value={this.state.value}
                 onChange={e => this.handleInput(e, "date")}
                 maxLength="25"
-                />
+              />
             </div>
-
+  
             <div className={styles.comp}>
-                <input
+              <label>Comp:</label>
+              <input
                 name="comp"
                 type="text"
                 ref={input => (this.textInput = input)}
@@ -128,11 +133,12 @@ export class AddJob extends React.Component {
                 value={this.state.value}
                 onChange={e => this.handleInput(e, "comp")}
                 maxLength="25"
-                />
+              />
             </div>
-
+  
             <div className={styles.pros}>
-                <input
+              <label>pros:</label>
+              <input
                 name="pros"
                 type="text"
                 ref={input => (this.textInput = input)}
@@ -141,11 +147,12 @@ export class AddJob extends React.Component {
                 value={this.state.value}
                 onChange={e => this.handleInput(e, "pros")}
                 maxLength="25"
-                />
+              />
             </div>
-
+  
             <div className={styles.cons}>
-                <input
+              <label>cons:</label>
+              <input
                 name="cons"
                 type="text"
                 ref={input => (this.textInput = input)}
@@ -154,24 +161,24 @@ export class AddJob extends React.Component {
                 value={this.state.value}
                 onChange={e => this.handleInput(e, "cons")}
                 maxLength="25"
-                />
+              />
             </div>
-
-
-            <div className={styles.buttonBox}>
-              <button type="submit" className={styles.saveButton}>
+  
+  
+            <div className="">
+              <button type="submit" className="updatebtn">
                 Save
-              </button>
+                </button>
               <button
-                className={styles.cancelButton}
+                className="updatebtn"
                 onClick={() => {
                   this.props.toggleForm();
                 }}
               >
                 Cancel
-              </button>
+                </button>
             </div>
-          </form>    
+          </form>
         </div>
       );
     }

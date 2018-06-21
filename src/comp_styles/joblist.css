@@ -1,9 +1,10 @@
-.result {
-    border: 1px solid grey;
+.list {
+    background-color: lightgrey;
+    border: 1px solid  #F78758;
     padding: 15px;
     margin: 10px;
     width: 154;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 100px;
+    margin-right: 100px;
     border-radius: 8px;
 }

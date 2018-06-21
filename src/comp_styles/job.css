@@ -1,11 +1,12 @@
 .job {
-    border: 1px solid grey;
+    border: 3px solid grey;
     padding: 15px;
     margin: 10px;
     width: 154;
     margin-left: 100px;
     margin-right: 100px;
     border-radius: 8px;
+
 }
 
 .loginbtn {

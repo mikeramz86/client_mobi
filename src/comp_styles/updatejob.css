@@ -1,0 +1,32 @@
+.job {
+    border: 1px solid  #F78758;
+    padding: 15px;
+    margin: 10px;
+    width: 154;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 8px;
+}
+
+.updatebtn {
+    display: inline-block;
+    width: 100px;
+    border-radius: 2px;
+    padding: 15px;
+    background-color:#A4356C;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    border-radius: 8px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.updateFrm {
+
+}
+
+
+/* Add greys to balance use yellow to hover over button */
+

@@ -5,6 +5,7 @@ import NavBar from './components/navbar';
 import AddJob from './components/addJob';
 import Job from './components/job';
 import UpdateJob from './components/updatejob';
+import JobList from './components/joblist';
 
 
 
@@ -20,6 +21,7 @@ class App extends Component {
             <p>
               Under Constructions.
             </p>
+            <JobList/>
             <AddJob/>
             <Job/>
             <UpdateJob/>
