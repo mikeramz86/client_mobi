@@ -67,6 +67,7 @@ export class AddJob extends React.Component {
             className={styles.formBox}
             onSubmit={this.handleSubmit}
           >
+            <h2>Add Job </h2>
             {inputRequired}
             <label>Job:</label>
             <input
