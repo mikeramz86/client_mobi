@@ -6,7 +6,7 @@ import AddJob from './components/addJob';
 import Job from './components/job';
 import UpdateJob from './components/updatejob';
 import JobList from './components/joblist';
-
+// import Landing from './components/landing';
 
 
 class App extends Component {
@@ -25,6 +25,7 @@ class App extends Component {
             <AddJob/>
             <Job/>
             <UpdateJob/>
+            {/* <Landing/> */}
 
           </div>
       </Router>
