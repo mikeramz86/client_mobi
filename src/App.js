@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
-import NavBar from './components/navbar';
-import AddJob from './components/addJob';
-import Job from './components/job';
-import UpdateJob from './components/updatejob';
-import JobList from './components/joblist';
-// import SideNav from './components/sidenav';
-// import Landing from './components/landing';
+
+import Dashboard from './components/dashboard';
+
 
 
 class App extends Component {
@@ -15,19 +11,10 @@ class App extends Component {
     return (
       <Router>
           <div className="App">
-            <NavBar/>
-            {/* <SideNav/> */}
-            <header className="App-header">
-              <h1 className="App-title">Welcome the Job App</h1>
-            </header>
-            <p>
-              Under Constructions.
-            </p>
-            <JobList/>
-            <AddJob/>
-            <Job/>
-            <UpdateJob/>
-            {/* <Landing/> */}
+
+
+            <Dashboard/>
+
 
           </div>
       </Router>

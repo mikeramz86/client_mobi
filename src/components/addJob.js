@@ -20,11 +20,11 @@ export class AddJob extends React.Component {
       // this.handleSubmit = this.handleSubmit.bind(this)
     }
   
-    handleInput(event, key) {
-      this.setState({
-        [key]: event.target.value
-      })
-    }
+    // handleInput(event, key) {
+    //   this.setState({
+    //     [key]: event.target.value
+    //   })
+    // }
   
   
     // handleSubmit(event) {
