@@ -18,8 +18,6 @@ class Job extends React.Component {
             <div>Cons:</div>
             <button className=" loginbtn">Update</button>
             <button className="loginbtn" type="submit">Delete</button>
-            
-
         </div>
     )
   }

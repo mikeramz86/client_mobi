@@ -6,6 +6,7 @@ import AddJob from './components/addJob';
 import Job from './components/job';
 import UpdateJob from './components/updatejob';
 import JobList from './components/joblist';
+// import SideNav from './components/sidenav';
 // import Landing from './components/landing';
 
 
@@ -15,6 +16,7 @@ class App extends Component {
       <Router>
           <div className="App">
             <NavBar/>
+            {/* <SideNav/> */}
             <header className="App-header">
               <h1 className="App-title">Welcome the Job App</h1>
             </header>
