@@ -7,7 +7,6 @@ import JobList from './joblist';
 // import Landing from './components/landing';
 
 
-//need a constructor for list of jobs so we can add that as a state
 
 
 class Dashboard extends Component {
@@ -27,21 +26,21 @@ class Dashboard extends Component {
         }
     }
 
-    addjob(addjob) {
+    addJob(addJob) {
         this.setState({
-            list: [...this.state.list, {
-                addjob
-            }]
+            list: [...this.state.list, {addJob}]
         });
     }
 
 
     render() {
-        // const cards = this.state.cards.map((card, index) =>
-        //     <li key={index}>
-        //         <AddJob {...card} />
-        //     </li>
-        // );
+        console.log('this',this.state)
+        const lists = this.state.list.map((list, index) =>
+            <li key={index}>
+                <JobList {...list}
+                 />
+            </li>
+        );
 
         return (
 
@@ -53,16 +52,11 @@ class Dashboard extends Component {
                 <p>
                     Under Constructions.
                 </p>
-
-                <JobList
-                    list={this.state.list}
-
-
-                />
+                {lists}
 
                 <AddJob />
-                <Job />
-                <UpdateJob />
+                {<Job />}
+                {/* <UpdateJob /> */} 
                 {/* <Landing/> */}
             </div>
 
