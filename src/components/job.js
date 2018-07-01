@@ -2,11 +2,38 @@ import React from "react";
 import "../comp_styles/job.css"
 
 class Job extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+        showDetails: false
+    }
+  }
+
+  toggleShowDetails(toggle) {
+    this.setState({
+        showDetails: toggle
+    });
+  }
+
 
 
   render() {
-
-    return(
+    if (!this.state.showDetails) {
+        return (
+        <div className="list">
+          <div>Company:</div>
+          <div>Job:</div>
+          <div>Stage:</div>
+          <div>Status:</div>
+  
+          <button className=" loginbtn"
+            onClick={() => this.toggleShowDetails(true)}
+          >View</button>
+  
+        </div>
+        );
+    }
+    return (
         <div className="job">
             <div>Company:</div>
             <div>Job:</div>
@@ -25,3 +52,9 @@ class Job extends React.Component {
 }
 
 export default Job
+
+
+
+
+
+

@@ -52,7 +52,6 @@ class Dashboard extends Component {
                 <p>
                     Under Constructions.
                 </p>
-                {lists}
 
                 <AddJob />
                 {<Job />}
