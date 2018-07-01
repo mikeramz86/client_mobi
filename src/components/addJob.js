@@ -32,7 +32,7 @@ export class AddJob extends React.Component {
 
 
   handleSubmit(event) {
-    console.log('this.state', this.state);
+    console.log('handleSubmit', this.state);
     event.preventDefault()
     const jobObj = {
       job: this.state.job,
@@ -41,7 +41,9 @@ export class AddJob extends React.Component {
       status:this.state.status,
       date: this.state.date,
       comp: this.state.comp,
-      pros: this.state.pros
+      pros: this.state.pros,
+      cons: this.state.cons,
+      notes: this.state.notes
     };
     this.props.dispatch(postJob(jobObj));
 
@@ -84,19 +86,17 @@ export class AddJob extends React.Component {
             maxLength="25"
           />
 
-          <div className={styles.status}>
-            <label>Status:</label>
-            <input
-              name="status"
-              type="Active"
-              // ref={input => (this.status = input)}
-              placeholder="Active"
-              className={styles.INSERT}
-              value={this.state.value}
-              onChange={e => this.handleInput(e, "status")}
-              maxLength="25"
-            />
-          </div>
+          <label>Company:</label>
+          <input
+            name="company"
+            type="text"
+            // ref={input => (this.title = input)}
+            placeholder="Google"
+            className={styles.job}
+            value={this.state.value}
+            onChange={e => this.handleInput(e, "company")}
+            maxLength="25"
+          />
 
           <div className={styles.stage}>
             <label>Stage:</label>
@@ -108,6 +108,20 @@ export class AddJob extends React.Component {
               className={styles.INSERT}
               value={this.state.value}
               onChange={e => this.handleInput(e, "stage")}
+              maxLength="25"
+            />
+          </div>
+
+          <div className={styles.status}>
+            <label>Status:</label>
+            <input
+              name="status"
+              type="Active"
+              // ref={input => (this.status = input)}
+              placeholder="Active"
+              className={styles.INSERT}
+              value={this.state.value}
+              onChange={e => this.handleInput(e, "status")}
               maxLength="25"
             />
           </div>
@@ -164,6 +178,20 @@ export class AddJob extends React.Component {
               className={styles.INSERT}
               value={this.state.value}
               onChange={e => this.handleInput(e, "cons")}
+              maxLength="25"
+            />
+          </div>
+
+          <div className={styles.status}>
+            <label>Notes:</label>
+            <input
+              name="notes"
+              type="text"
+              // ref={input => (this.status = input)}
+              placeholder="Other"
+              className={styles.INSERT}
+              value={this.state.value}
+              onChange={e => this.handleInput(e, "notes")}
               maxLength="25"
             />
           </div>
