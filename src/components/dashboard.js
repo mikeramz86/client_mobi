@@ -6,6 +6,9 @@ import UpdateJob from './updatejob';
 import JobList from './joblist';
 // import Landing from './components/landing';
 
+// look at unit 2.1.3
+// becareful with the setting up stage!! follow guide!!
+
 
 
 

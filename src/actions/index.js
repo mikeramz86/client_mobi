@@ -19,10 +19,21 @@ export const postJob = (sendJob) => dispatch => {
         // .then(jobs => {
         //     dispatch(addJobSuccess(sendJob));
         // })
-
-
-
 };
+
+
+export const getJobList = () => dispatch => {
+    fetch (`${API_BASE_URL}/jobs`, {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json"
+          }
+
+    })
+        .then(res => {
+            console.log('result', res);
+        })
+}
 
 
 //look into axios 
