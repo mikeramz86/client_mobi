@@ -1,4 +1,4 @@
-import {API_BASE_URL} from '../components/config';
+import {API_BASE_URL} from '../config';
 
 export const postJob = (sendJob) => dispatch => {
     // console.log('action postJob working')

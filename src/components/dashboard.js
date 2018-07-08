@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import NavBar from './navbar';
 import AddJob from './addJob';
 import Job from './job';
-import UpdateJob from './updatejob';
+// import UpdateJob from './updatejob';
 import JobList from './joblist';
 // import Landing from './components/landing';
 
@@ -55,7 +55,7 @@ class Dashboard extends Component {
                 <p>
                     Under Constructions.
                 </p>
-
+                
                 <AddJob />
                 {<Job />}
                 {/* <UpdateJob /> */} 

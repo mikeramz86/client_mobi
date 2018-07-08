@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 
 import Dashboard from './components/dashboard';
+import RegistrationPage from './components/registration-page';
+
 
 
 
@@ -14,6 +16,8 @@ class App extends Component {
 
 
             <Dashboard/>
+            {/* <Route exact path="/register" component={RegistrationPage} /> */}
+
 
 
           </div>
