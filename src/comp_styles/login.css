@@ -9,7 +9,7 @@
   left: 60px;
 }
 
-.loginContain {
+/* .loginContain {
   background: white;
   width: 320px;
   position: fixed;
@@ -18,7 +18,22 @@
   z-index: 2;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.3);
   transition: 0.5s;
+} */
+
+.login-form {
+  border-radius: 1px solid black;
+  /* height: 300px;
+  margin: 20px; */
+  /* margin-top: 100px; */
+  /* display: flex; */
+  /* align-items: center; */
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  
 }
+
 
 .slideDown {
   top: 0;
@@ -80,7 +95,7 @@
   padding: 4px;
 }
 
-.submitLoginButton {
+.submitLogInButton {
   width: 70px;
   margin: 0 auto;
   display: block;
@@ -91,7 +106,7 @@
   font-size: 14px;
 }
 
-.submitLoginButton:hover {
+.submitLogInButton:hover {
   background: rgba(61, 80, 153, 1);
 }
 
