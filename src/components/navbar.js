@@ -14,7 +14,7 @@ class NavBar extends React.Component {
     return(
         <div className="navContainer">
           <Link to="/" className="headerLink">
-            <h1>Job App</h1>
+            <h1>mobi</h1>
           </Link>
           <nav>
             <div className="navWide">
