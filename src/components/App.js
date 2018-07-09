@@ -3,8 +3,13 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import '../comp_styles/App.css';
 
 import Dashboard from './dashboard';
+import NavBar from './navbar';
+import MAINSECTION from './mainSection';
 // import RegistrationPage from './components/registration-page';
 import InfoSection from './info';
+import Footer from './footer';
+import MainSection from './mainSection';
+
 
 
 
@@ -15,8 +20,13 @@ class App extends Component {
       <Router>
           <div className="App">
 
+            <NavBar/>
 
+            <MainSection/>
+            
             <InfoSection/>
+
+            <Footer/>
 
 
           </div>

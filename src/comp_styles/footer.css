@@ -1,0 +1,15 @@
+
+.footerContain {
+    background: grey;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.creditText {
+    text-align: center;
+    color: #262828;
+    font-size: 14px;
+}
