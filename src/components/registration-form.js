@@ -11,11 +11,13 @@ const matchesPassword = matches('password');
 
 export class RegistrationForm extends React.Component {
     onSubmit(values) {
-        const {username, password, firstName, lastName, emailAdddress} = values;
-        const user = {username, password, firstName, lastName, emailAdddress};
+        console.log('values', values)
+        const {username, password, FirstName, LastName, EmailAddress} = values;
+        const user = {username, password, FirstName, LastName, EmailAddress};
+        console.log('user', user)
         return this.props
             .dispatch(registerUser(user))
-            .then(() => this.props.dispatch(login(emailAdddress, password)));
+            .then(() => this.props.dispatch(login(EmailAddress, password)));
     }
 
     render() {
@@ -26,24 +28,25 @@ export class RegistrationForm extends React.Component {
                     this.onSubmit(values)
                 )}>
                 <h3> SIGN UP TODAY </h3>
-                <label htmlFor="firstName">First name</label>
-                <Field component={Input} type="text" name="firstName" />
-                <label htmlFor="lastName">Last name</label>
-                <Field component={Input} type="text" name="lastName" />
-                <label htmlFor="username">Username</label>
+                <label htmlFor="FirstName">First name</label>
+                <Field component={Input} type="text" name="FirstName" />
+                <label htmlFor="LastName">Last name</label>
+                <Field component={Input} type="text" name="LastName" />
+                <label htmlFor="Username">Username</label>
                 <Field
                     component={Input}
                     type="text"
                     name="username"
                     validate={[required, nonEmpty, isTrimmed]}
                 />
-                <label htmlFor="emailaddress">Email</label>
+                <label htmlFor="EmailAddress">Email</label>
                 <Field
                     component={Input}
                     type="text"
-                    name="email"
+                    name="EmailAddress"
                     validate={[required, nonEmpty, isTrimmed]}
                 />
+                
                 <label htmlFor="password">Password</label>
                 <Field
                     component={Input}
