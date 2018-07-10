@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "../comp_styles/mainSection.css";
-import RegistrationForm from './registration-form';
+import RegistrationPage from './registration-page';
 
 class MainSection extends React.Component {
 
@@ -20,7 +20,7 @@ class MainSection extends React.Component {
                         <h2 className="mainContent">mobi</h2>
                         <div className="mainContent">You're all in one platform to keep track of what matters the most. You're next Career</div>
                     </div>
-                    <RegistrationForm/>
+                    <RegistrationPage/>
                 </section>
             </div>
         )
