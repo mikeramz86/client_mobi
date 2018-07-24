@@ -1,9 +1,18 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import AddMember from './AddMember';
+import {shallow} from "enzyme";
+import configure from "../setupTests"
+import store from "../store";
+import {Provider} from "react-redux";
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+describe("AddMember", () => {
+  it("Renders without crashing", () => {
+    shallow(
+    <Provider store={store}>
+      <AddMember />
+    </Provider>
+    )
+  })
+})
