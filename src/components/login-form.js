@@ -25,12 +25,12 @@ export class LoginForm extends React.Component {
                     this.onSubmit(values)
                 )}>
                 {error}
-                <label htmlFor="username">Username</label>
+                <label htmlFor="emailaddress">Email Address</label>
                 <Field
                     component={Input}
                     type="text"
-                    name="username"
-                    id="username"
+                    name="emailaddress"
+                    id="emailaddress"
                     validate={[required, nonEmpty]}
                 />
                 <label htmlFor="password">Password</label>

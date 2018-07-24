@@ -53,8 +53,8 @@
   
 }
   
-  @media only screen and (min-width: 750px) {
-    .explainSection {
+@media only screen and (min-width: 750px) {
+  .explainSection {
       padding: 20px;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
@@ -62,23 +62,24 @@
       margin-top: 200px;
     }
   
-    .explainBlock {
+  .explainBlock {
       margin: 0;
       display: grid;
     }
   
     .explainIcon {
       margin: 0 auto;
+      display: block;
     }
   
-    .explainIconContain {
+  .explainIconContain {
      display: flex;
      justify-content: center;
     }
   
-    .explainContent {
+  .explainContent {
       padding: 20px;
       margin-top: -45px;
   
     }
-  }
+}
