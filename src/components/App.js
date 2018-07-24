@@ -1,32 +1,24 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import '../comp_styles/App.css';
 
-import Dashboard from './dashboard';
+import React from 'react';
+import {connect} from 'react-redux';
+import {Router, Route} from 'react-router-dom';
+
 import NavBar from './navbar';
-import MAINSECTION from './mainSection';
-// import RegistrationPage from './components/registration-page';
-import InfoSection from './info';
-import Footer from './footer';
-import MainSection from './mainSection';
+import Landing from './landing';
+// import Dashboard from './dashboard';
+// import RegistrationPage from './registration-page';
 
+export class App extends React.Component {
 
-
-
-
-class App extends Component {
   render() {
     return (
       <Router>
           <div className="App">
-
             <NavBar/>
-
-            <MainSection/>
-            
-            <InfoSection/>
-
-            <Footer/>
+            <Landing/>
+            {/* <Route exact path="/landing" component={Landing} />
+            <Route exact path="/dashboard" component={Dashboard} /> */}
+            {/* <Route exact path="/register" component={RegistrationPage} /> */}
 
 
           </div>
@@ -35,29 +27,70 @@ class App extends Component {
   }
 }
 
-export default App;
+
+const mapStateToProps = state => ({
+  hasAuthToken: state.auth.authToken !== null,
+  loggedIn: state.auth.currentUser !== null
+});
+
+export default connect(mapStateToProps)(App)
 
 
-/*
-
-in order to check if comp are working
-  1. import it to your main js which is app,js
-  2. Add it it your code
 
 
-NOTES 6/19
-- Make sure you can submit things is priority
-- grabbing Data and making a list
 
-- Create list componenet
-  - see if data is coming through the way I want too
-- Being able to view jobs and update it
 
-OTHER NOTES
-- Get form to show up
-- Get it to submit
-- Get it to Ajax
-  - user = []
-  - think of jquery creating mock database is another option
 
-*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React, { Component } from 'react';
+// import { BrowserRouter as Router, Route } from 'react-router-dom';
+// import '../comp_styles/App.css';
+
+// import Dashboard from './dashboard';
+// import NavBar from './navbar';
+// import MAINSECTION from './mainSection';
+// // import RegistrationPage from './components/registration-page';
+// import InfoSection from './info';
+// import Footer from './footer';
+// import MainSection from './mainSection';
+
+
+
+
+
+// class App extends Component {
+//   render() {
+//     return (
+//       <Router>
+//           <div className="App">
+
+//             <NavBar/>
+
+//             <MainSection/>
+            
+//             <InfoSection/>
+
+//             <Footer/>
+
+
+//           </div>
+//       </Router>
+//     );
+//   }
+// }
+
+// export default App;
+
+
