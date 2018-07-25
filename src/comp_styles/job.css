@@ -3,12 +3,13 @@
     padding: 15px;
     margin: 10px;
     width: 154;
-    margin-top: 100px;
+    margin-top: 200px;
     margin-left: 100px;
     margin-right: 100px;
     border-radius: 8px;
 
 }
+
 
 .loginbtn {
     display: inline-block;

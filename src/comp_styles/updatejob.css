@@ -8,6 +8,10 @@
     border-radius: 8px;
 }
 
+.add {
+    margin-top: 100px;
+}
+
 .updatebtn {
     display: inline-block;
     width: 100px;
@@ -23,9 +27,6 @@
     cursor: pointer;
 }
 
-.updateFrm {
-
-}
 
 
 /* Add greys to balance use yellow to hover over button */

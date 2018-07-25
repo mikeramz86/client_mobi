@@ -67,7 +67,7 @@ export class AddJob extends React.Component {
 
 
     return (
-      <div className="job">
+      <div className="job add">
         <form
           className={styles.formBox}
           onSubmit={this.handleSubmit}
