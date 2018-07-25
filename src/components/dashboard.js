@@ -50,17 +50,9 @@ class Dashboard extends Component {
 
             <div>
                 <NavBar />
-                <header className="App-header">
-                    <h1 className="App-title">Welcome the Job App</h1>
-                </header>
-                <p>
-                    Under Constructions.
-                </p>
-                
                 <AddJob />
                 {<Job />}
                 {/* <UpdateJob /> */} 
-                {/* <Landing/> */}
             </div>
 
         );

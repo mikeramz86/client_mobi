@@ -38,7 +38,7 @@ export class AddJob extends React.Component {
       job: this.state.job,
       company: this.state.company,
       stage: this.state.stage,
-      status:this.state.status,
+      status: this.state.status,
       date: this.state.date,
       comp: this.state.comp,
       pros: this.state.pros,
@@ -54,7 +54,7 @@ export class AddJob extends React.Component {
   //     validateDisplay: !this.state.validateDisplay
   //   })
   // }
- 
+
 
 
 

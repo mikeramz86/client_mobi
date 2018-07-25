@@ -1,5 +1,6 @@
 import React from "react";
 import "../comp_styles/job.css"
+import UpdateJob from './updatejob';
 
 class Job extends React.Component {
   constructor(props) {
@@ -12,6 +13,12 @@ class Job extends React.Component {
   toggleShowDetails(toggle) {
     this.setState({
         showDetails: toggle
+    });
+  }
+
+  updateJobDetails(toggle){
+    this.setState({
+      updateDetails: toggle
     });
   }
 
@@ -32,7 +39,12 @@ class Job extends React.Component {
   
         </div>
         );
+    } else {
+        return (
+          <UpdateJob/>
+      );
     }
+    
     return (
         <div className="job">
             <div>Company:</div>
@@ -43,7 +55,8 @@ class Job extends React.Component {
             <div>Comp:</div>
             <div>Pros:</div>
             <div>Cons:</div>
-            <button className=" loginbtn">Update</button>
+            <button className=" loginbtn"
+              onClick={() => this.updateJobDetails(true)}>Update</button>
             <button className="loginbtn" type="submit">Delete</button>
         </div>
     )

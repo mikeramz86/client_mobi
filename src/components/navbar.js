@@ -23,7 +23,7 @@ class NavBar extends React.Component {
 
     return (
       <div className="navContainer">
-        <Link to="/" className="headerLink">
+        <Link to="/dashboard" className="headerLink">
           <h1>mobi</h1>
         </Link>
         <nav>
@@ -44,4 +44,8 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps)(NavBar);
-// export default NavBar
+
+
+//Mentor Note: Do not commit things that are not working. Instead create a branch instead. Looking into git stash?
+
+//REMEMBER INCREMENTAL WORKS!!!
