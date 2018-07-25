@@ -52,7 +52,6 @@ class Dashboard extends Component {
                 <NavBar />
                 <AddJob />
                 {<Job />}
-                {/* <UpdateJob /> */} 
             </div>
 
         );

@@ -60,11 +60,6 @@ import '../comp_styles/App.css';
 
 import Dashboard from './dashboard';
 import NavBar from './navbar';
-import MAINSECTION from './mainSection';
-// import RegistrationPage from './components/registration-page';
-import InfoSection from './info';
-import Footer from './footer';
-import MainSection from './mainSection';
 import Landing from './landing'
 import LogIn from './login-form';
 
@@ -73,6 +68,7 @@ import LogIn from './login-form';
 
 
 class App extends Component {
+
   render() {
     return (
       <Router>

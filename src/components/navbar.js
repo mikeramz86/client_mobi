@@ -30,7 +30,7 @@ class NavBar extends React.Component {
           <div className="navWide">
             <Link className="navLink" to="/login">Login</Link>
             <Link className="navLink" to="/registration-page">Signup</Link>
-            {logOutButton}
+              {logOutButton}
           </div>
         </nav>
       </div>
