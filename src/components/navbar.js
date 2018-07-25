@@ -29,7 +29,7 @@ class NavBar extends React.Component {
         <nav>
           <div className="navWide">
             <Link className="navLink" to="/login">Login</Link>
-            <Link className="navLink" to="/registration-page">Signup</Link>
+            {/* <Link className="navLink" to="/registration-page">Signup</Link> */}
               {logOutButton}
           </div>
         </nav>
