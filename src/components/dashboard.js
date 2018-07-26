@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NavBar from './navbar';
+import HeadBar from './headbar';
 import AddJob from './addJob';
 import Job from './job';
 // import UpdateJob from './updatejob';
@@ -49,7 +49,7 @@ class Dashboard extends Component {
         return (
 
             <div>
-                <NavBar />
+                <HeadBar />
                 <AddJob />
                 {<Job />}
             </div>
