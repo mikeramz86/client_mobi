@@ -6,7 +6,7 @@ import "../comp_styles/navbar.css"
 import { clearAuth } from '../actions/auth';
 import { clearAuthToken } from '../local-storage';
 
-class NavBar extends React.Component {
+class HeadBar extends React.Component {
 
   logOut() {
     this.props.dispatch(clearAuth());
@@ -41,7 +41,7 @@ const mapStateToProps = state => ({
   loggedIn: state.auth.currentUser !== null
 });
 
-export default connect(mapStateToProps)(NavBar);
+export default connect(mapStateToProps)(HeadBar);
 
 
 //Mentor Note: Do not commit things that are not working. Instead create a branch instead. Looking into git stash?

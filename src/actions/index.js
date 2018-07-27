@@ -1,13 +1,15 @@
 import {API_BASE_URL} from '../config';
 
-export const postJob = (sendJob) => dispatch => {
+export const postJob = (sendJob, authToken) => dispatch => {
     // console.log('action postJob working')
     fetch(`${API_BASE_URL}/jobs`, {
         body: JSON.stringify(sendJob),
         method: 'POST',
         headers: {
             // 'user-agent': 'Mozilla/4.0 MDN Example',
-            'content-type': 'application/json'
+            'content-type': 'application/json',
+            Authorization: `Bearer ${authToken}`
+
           }
     })
         .then(res => {

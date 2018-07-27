@@ -45,7 +45,8 @@ export class AddJob extends React.Component {
       cons: this.state.cons,
       notes: this.state.notes
     };
-    this.props.dispatch(postJob(jobObj));
+    this.props.dispatch(postJob(jobObj,this.props.authToken));
+    
 
   };
 
@@ -59,7 +60,7 @@ export class AddJob extends React.Component {
 
 
   render() {
-
+    console.log('authToken', this.props.authToken);
     let inputRequired;
     if (this.state.validateDisplay) {
       inputRequired = <div className={styles.validate}>Required</div>
@@ -217,7 +218,8 @@ export class AddJob extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  jobs: state.jobs
+  jobs: state.jobs,
+  authToken: state.auth.authToken
 });
 
 // export default AddJob;
