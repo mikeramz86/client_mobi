@@ -98,30 +98,33 @@ class Login extends Component {
                 </div>
                 {loginLoadingMessage}
                 {loginFailMessage}
-                <form className={styles.formContain} onSubmit={this.handleSubmit}>
-                    <label className={styles.loginLabel}>Username</label>
-                    {usernameValidationMessage}
-                    <input
-                        id="usernameLogin"
-                        type="text"
-                        className={styles.loginInput}
-                        placeholder="username"
-                        value={this.state.username}
-                        onChange={e => this.handleInput(e, "username")}
-                    ></input>
-                    <label className={styles.loginLabel}>Password</label>
-                    {passwordValidationMessage}
-                    <input
-                        id="passwordLogin"
-                        type="password"
-                        className={styles.loginInput}
-                        placeholder="•••••••"
-                        value={this.state.password}
-                        onChange={e => this.handleInput(e, "password")}
-                    ></input>
-                    <button className={styles.submitLoginButton} type="submit">Log In</button>
-                    <button className={styles.closeButton} aria-label="close" onClick={(e) => this.props.toggleLogin(e)}>x</button>
-                </form>
+                <div>
+                    <span className="closed-button">X</span>
+                    <form className={styles.formContain} onSubmit={this.handleSubmit}>
+                        <label className={styles.loginLabel}>Username</label>
+                        {usernameValidationMessage}
+                        <input
+                            id="usernameLogin"
+                            type="text"
+                            className={styles.loginInput}
+                            placeholder="username"
+                            value={this.state.username}
+                            onChange={e => this.handleInput(e, "username")}
+                        ></input>
+                        <label className={styles.loginLabel}>Password</label>
+                        {passwordValidationMessage}
+                        <input
+                            id="passwordLogin"
+                            type="password"
+                            className={styles.loginInput}
+                            placeholder="•••••••"
+                            value={this.state.password}
+                            onChange={e => this.handleInput(e, "password")}
+                        ></input>
+                        <button className={styles.submitLoginButton} type="submit">Log In</button>
+                        <button className={styles.closeButton} aria-label="close" onClick={(e) => this.props.toggleLogin(e)}>x</button>
+                    </form>
+                </div>
             </div>
         )
     }
