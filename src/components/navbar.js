@@ -1,7 +1,7 @@
 import React from "react";
 //if i see line 3 its because I should be importing something
 import {connect} from 'react-redux';
-import { Link, Redirect } from "react-router-dom";
+import { Link, Redirect, withRouter } from "react-router-dom";
 import "../comp_styles/navbar.css"
 import { clearAuth } from '../actions/auth';
 import { clearAuthToken } from '../local-storage';

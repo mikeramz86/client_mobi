@@ -10,12 +10,12 @@ import "../comp_styles/joblist.css"
 class JobList extends React.Component {
   constructor(props) {
     super(props);
-    console.log('this is props', props);
   }
 
   componentDidMount() {
-    this.props.dispatch(getJobList(this.props.authToken));
-    console.log('this is JL', getJobList);
+    if (this.props.authToken) {
+      this.props.dispatch(getJobList(this.props.authToken));
+    }
 }
 
 

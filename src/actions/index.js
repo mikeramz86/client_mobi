@@ -44,6 +44,7 @@ export const getJobList = (authToken) => dispatch => {
         .then(json => {
             dispatch(setJobList(json))
         })
+        //add catch to this code refer to auth action code!!!
 }
 
 
