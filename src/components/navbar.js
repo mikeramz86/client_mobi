@@ -1,16 +1,23 @@
 import React from "react";
 //if i see line 3 its because I should be importing something
 import {connect} from 'react-redux';
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import "../comp_styles/navbar.css"
 import { clearAuth } from '../actions/auth';
 import { clearAuthToken } from '../local-storage';
+
 
 class NavBar extends React.Component {
 
   logOut() {
     this.props.dispatch(clearAuth());
     clearAuthToken();
+  }
+
+  renderHome= () => {
+    if (!this.props.loggedIn) {
+      return <Redirect to='/'/>
+    }
   }
 
   render() {
@@ -23,6 +30,7 @@ class NavBar extends React.Component {
 
     return (
       <div className="navContainer">
+        {this.renderHome()}
         <Link to="/dashboard" className="headerLink">
           <h1>mobi</h1>
         </Link>
