@@ -43,8 +43,16 @@ export const getJobList = (authToken) => dispatch => {
 
     // })
         .then(res => {
-            console.log('get job result', res.json());
+            console.log('get job result', res.json);
+            return res.json();
+            //create an action where you save response to getjoblist
+            //reducer
+            //use get state to props joblist react component
+        })
+        .then (json => {
+            console.log( 'this is json', json);
         })
 }
+
 
 // once its successful create an update joblist 
