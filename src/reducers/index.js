@@ -6,14 +6,13 @@ const initialState = {
 };
 
 export const reducer = (state=initialState, action) => {
-    // if (action.type === actions.ADD_LIST) {
-    //     return Object.assign({}, state, {
-    //         user: [...state.user, {
-    //             title: action.title,
-    //             cards: []
-    //         }]
-    //     });
-    // }
+    if (action.type === action.JOB_FETCH) {
+        return Object.assign({}, state, {
+            jobs: [...state.jobs, 
+                action.job
+            ]
+        });
+    }
     
     return state;
 };

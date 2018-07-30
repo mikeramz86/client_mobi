@@ -51,7 +51,7 @@ class Dashboard extends Component {
             <div>
                 <HeadBar />
                 <AddJob />
-                {<Job />}
+                <JobList />
             </div>
 
         );

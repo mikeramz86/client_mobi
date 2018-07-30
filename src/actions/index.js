@@ -24,18 +24,27 @@ export const postJob = (sendJob, authToken) => dispatch => {
 };
 
 
-export const getJobList = () => dispatch => {
+export const getJobList = (authToken) => dispatch => {
     fetch (`${API_BASE_URL}/jobs`, {
         method: "GET",
+        // mode: "cors",
         headers: {
-            "Content-Type": "application/json"
-          }
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${authToken}`
+        }
 
     })
+    // fetch (`${API_BASE_URL}/jobs`, {
+    //     method: "GET",
+    //     headers: {
+    //         "Content-Type": "application/json",
+    //         Authorization: `Bearer ${authToken}`
+    //       }
+
+    // })
         .then(res => {
-            console.log('result', res);
+            console.log('get job result', res.json());
         })
 }
 
-
-//look into axios 
+// once its successful create an update joblist 
