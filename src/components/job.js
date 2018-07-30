@@ -1,4 +1,5 @@
 import React from "react";
+import moment from "moment";
 import "../comp_styles/job.css"
 import UpdateJob from './updatejob';
 
@@ -26,16 +27,19 @@ class Job extends React.Component {
 
   render() {
     if (!this.state.showDetails) {
+        let date = moment(this.props.date)
+        let ago = date.fromNow()
+        let dateFormat = date.format('M-DD-YYYY') + ` (${ago})`
         return (
         <div className="job">
-            <div>Company:</div>
-            <div>Job:</div>
-            <div>Stage:</div>
-            <div>Status:</div>
-            <div>Date:</div>
-            <div>Comp:</div>
-            <div>Pros:</div>
-            <div>Cons:</div>
+            <div>Company:{this.props.company}</div>
+            <div>Job:{this.props.job}</div>
+            <div>Stage:{this.props.stage}</div>
+            <div>Status:{this.props.status}</div>
+            <div>Date:{dateFormat}</div>
+            <div>Comp:{this.props.comp}</div>
+            <div>Pros:{this.props.pros}</div>
+            <div>Cons:{this.props.cons}</div>
   
           <button className=" loginbtn"
             onClick={() => this.toggleShowDetails(true)}

@@ -20,11 +20,26 @@ class JobList extends React.Component {
 
 
   render() {
+    let jobs = this.props.jobs.map(job => {
+      return ( 
+      <Job 
+        key={job.id}
+        company={job.company}
+        job={job.job}
+        stage={job.stage}
+        status={job.status}
+        date={job.date}
+        comp={job.comp}
+        pros={job.pros}
+        cons={job.cons}
+        />
+      )
+    })
   console.log('this.props', this.props);
 
     return (
       <div>
-          <Job/>
+        {jobs}
       </div>
     )
   }
