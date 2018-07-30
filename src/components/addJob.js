@@ -32,7 +32,7 @@ export class AddJob extends React.Component {
 
 
   handleSubmit(event) {
-    console.log('handleSubmit', this.state);
+    // console.log('handleSubmit', this.state);
     event.preventDefault()
     const jobObj = {
       job: this.state.job,
@@ -60,7 +60,7 @@ export class AddJob extends React.Component {
 
 
   render() {
-    console.log('authToken', this.props.authToken);
+    // console.log('authToken', this.props.authToken);
     let inputRequired;
     if (this.state.validateDisplay) {
       inputRequired = <div className={styles.validate}>Required</div>

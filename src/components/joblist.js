@@ -15,10 +15,12 @@ class JobList extends React.Component {
 
   componentDidMount() {
     this.props.dispatch(getJobList(this.props.authToken));
+    console.log('this is JL', getJobList);
 }
 
 
   render() {
+  console.log('this.props', this.props);
 
     return (
       <div>
@@ -30,7 +32,7 @@ class JobList extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  jobs: state.jobs,
+  jobs: state.job.jobs,
   authToken: state.auth.authToken
 
 })

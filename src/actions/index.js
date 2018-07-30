@@ -1,4 +1,10 @@
-import {API_BASE_URL} from '../config';
+import { API_BASE_URL } from '../config';
+
+export const JOB_GET = 'JOB_GET';
+export const setJobList = jobs => ({
+    type: JOB_GET,
+    payload: jobs
+});
 
 export const postJob = (sendJob, authToken) => dispatch => {
     // console.log('action postJob working')
@@ -10,7 +16,7 @@ export const postJob = (sendJob, authToken) => dispatch => {
             'content-type': 'application/json',
             Authorization: `Bearer ${authToken}`
 
-          }
+        }
     })
         .then(res => {
             if (!res.ok) {
@@ -18,39 +24,25 @@ export const postJob = (sendJob, authToken) => dispatch => {
             }
             return res.json();
         })
-        // .then(jobs => {
-        //     dispatch(addJobSuccess(sendJob));
-        // })
+    // .then(jobs => {
+    //     dispatch(addJobSuccess(sendJob));
+    // })
 };
 
 
 export const getJobList = (authToken) => dispatch => {
-    fetch (`${API_BASE_URL}/jobs`, {
+    fetch(`${API_BASE_URL}/jobs`, {
         method: "GET",
-        // mode: "cors",
         headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${authToken}`
         }
-
     })
-    // fetch (`${API_BASE_URL}/jobs`, {
-    //     method: "GET",
-    //     headers: {
-    //         "Content-Type": "application/json",
-    //         Authorization: `Bearer ${authToken}`
-    //       }
-
-    // })
         .then(res => {
-            console.log('get job result', res.json);
             return res.json();
-            //create an action where you save response to getjoblist
-            //reducer
-            //use get state to props joblist react component
         })
-        .then (json => {
-            console.log( 'this is json', json);
+        .then(json => {
+            dispatch(setJobList(json))
         })
 }
 

@@ -1,11 +1,13 @@
-// import * as actions from '../actions';
+import {
+    JOB_GET
+} from '../actions/index';
 
 const initialState = {
     user: {},
     jobs: []
 };
 
-export const reducer = (state=initialState, action) => {
+const reducer = (state=initialState, action) => {
     if (action.type === action.JOB_FETCH) {
         return Object.assign({}, state, {
             jobs: [...state.jobs, 
@@ -14,5 +16,12 @@ export const reducer = (state=initialState, action) => {
         });
     }
     
+    if (action.type === JOB_GET) {
+        return Object.assign({}, state, {
+            jobs:  action.payload            
+        })
+    }
     return state;
 };
+
+export default reducer;
