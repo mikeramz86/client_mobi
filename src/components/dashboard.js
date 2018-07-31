@@ -14,37 +14,36 @@ import JobList from './joblist';
 
 
 class Dashboard extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            list: [{
-                job: "Engineer",
-                company: "Google",
-                stage: "OSI",
-                status: "Active",
-                date: "6/24/18",
-                comp: "500k",
-                pros: "It's google",
-                cons: "It's google",
-            }]
-        }
-    }
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         list: [{
+    //             job: "Engineer",
+    //             company: "Google",
+    //             stage: "OSI",
+    //             status: "Active",
+    //             date: "6/24/18",
+    //             comp: "500k",
+    //             pros: "It's google",
+    //             cons: "It's google",
+    //         }]
+    //     }
+    // }
 
-    addJob(addJob) {
-        this.setState({
-            list: [...this.state.list, {addJob}]
-        });
-    }
+    // addJob(addJob) {
+    //     this.setState({
+    //         list: [...this.state.list, {addJob}]
+    //     });
+    // }
 
 
     render() {
-        console.log('this',this.state)
-        const lists = this.state.list.map((list, index) =>
-            <li key={index}>
-                <JobList {...list}
-                 />
-            </li>
-        );
+        // const lists = this.state.list.map((list, index) =>
+        //     <li key={index}>
+        //         <JobList {...list}
+        //          />
+        //     </li>
+        // );
 
         return (
 

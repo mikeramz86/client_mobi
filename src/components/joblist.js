@@ -2,6 +2,8 @@ import React from "react";
 import {connect} from 'react-redux'
 import PropTypes from 'prop-types';
 import Job from './job';
+import UpdateJob from './updatejob';
+
 
 import {getJobList} from '../actions';
 
@@ -33,6 +35,24 @@ class JobList extends React.Component {
         pros={job.pros}
         cons={job.cons}
         />
+        
+      )
+    })
+
+    let updateJobs = this.props.jobs.map(updateJob => {
+      return ( 
+      <UpdateJob 
+        key={updateJob.id}
+        company={updateJob.company}
+        job={updateJob.job}
+        stage={updateJob.stage}
+        status={updateJob.status}
+        date={updateJob.date}
+        comp={updateJob.comp}
+        pros={updateJob.pros}
+        cons={updateJob.cons}
+        />
+        
       )
     })
   console.log('this.props', this.props);
@@ -40,6 +60,7 @@ class JobList extends React.Component {
     return (
       <div>
         {jobs}
+        {/* {updateJobs} */}
       </div>
     )
   }
@@ -48,6 +69,7 @@ class JobList extends React.Component {
 
 const mapStateToProps = state => ({
   jobs: state.job.jobs,
+  updateJobs: state.job.updateJobs,
   authToken: state.auth.authToken
 
 })

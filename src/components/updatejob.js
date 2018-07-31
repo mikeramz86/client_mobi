@@ -26,36 +26,10 @@ export class UpdateJob extends React.Component {
     })
   }
 
-
-  // handleSubmit(event) {
-  //   event.preventDefault()
-  //   if (this.state.job.trim() === "") {
-  //     this.showValidator()
-  //   } else {
-  //     this.props.dispatch(job(this.state));
-  //     this.props.toggleForm()
-  //     this.setState = {
-  //         job: "",
-  //         company: "",
-  //         stage: "",
-  //         status:"",
-  //         date:"",
-  //         comp:"",
-  //         pros:"",
-  //         cons:"",
-  //     }
-  //   }
-  // }
-
-  // showValidator() {
-  //   this.setState({
-  //     validateDisplay: !this.state.validateDisplay
-  //   })
-  // }
-
   render() {
 
     let inputRequired;
+    
     if (this.state.validateDisplay) {
       inputRequired = <div className={styles.validate}>Required</div>
     }
@@ -74,7 +48,7 @@ export class UpdateJob extends React.Component {
             name="job"
             type="text"
             ref={input => (this.textInput = input)}
-            placeholder="Software Engineer"
+            placeholder={this.props.job}
             className={styles.job}
             value={this.state.value}
             onChange={e => this.handleInput(e, "job")}
