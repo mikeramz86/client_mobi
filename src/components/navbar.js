@@ -31,7 +31,7 @@ class NavBar extends React.Component {
     return (
       <div className="navContainer">
         {this.renderHome()}
-        <Link to="/dashboard" className="headerLink">
+        <Link to="/" className="headerLink">
           <h1>mobi</h1>
         </Link>
         <nav>

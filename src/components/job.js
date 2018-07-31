@@ -44,6 +44,10 @@ class Job extends React.Component {
           <button className=" loginbtn"
             onClick={() => this.toggleShowDetails(true)}
           >Update Job</button>
+
+          <button className=" loginbtn"
+            onClick={() => this.toggleShowDetails(true)}
+          >Delete Job</button>
   
         </div>
         );
