@@ -32,14 +32,14 @@ class Job extends React.Component {
         let dateFormat = date.format('M-DD-YYYY') + ` (${ago})`
         return (
         <div className="job">
-            <div>Company:{this.props.company}</div>
-            <div>Job:{this.props.job}</div>
-            <div>Stage:{this.props.stage}</div>
-            <div>Status:{this.props.status}</div>
-            <div>Date:{dateFormat}</div>
-            <div>Comp:{this.props.comp}</div>
-            <div>Pros:{this.props.pros}</div>
-            <div>Cons:{this.props.cons}</div>
+            <div className="field"><strong>Company:</strong>     {this.props.company}</div>
+            <div className="field"><strong>Job:</strong> {this.props.job}</div>
+            <div className="field"><strong>Stage:</strong> {this.props.stage}</div>
+            <div className="field"><strong>Status:</strong> {this.props.status}</div>
+            <div className="field"><strong>Date:</strong> {dateFormat}</div>
+            <div className="field"><strong>Comp:</strong> {this.props.comp}</div>
+            <div className="field"><strong>Pros:</strong> {this.props.pros}</div>
+            <div className="field"><strong>Cons:</strong> {this.props.cons}</div>
   
           <button className=" loginbtn"
             onClick={() => this.toggleShowDetails(true)}
