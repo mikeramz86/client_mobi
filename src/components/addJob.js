@@ -4,6 +4,7 @@ import React from "react";
 import { connect } from 'react-redux';
 import styles from "../comp_styles/addJob.css";
 import { postJob } from "../actions";
+import Alert from './alert';
 
 
 
@@ -21,7 +22,8 @@ export class AddJob extends React.Component {
       pros: "",
       cons: "",
       notes:"",
-      validateDisplay: false
+      validateDisplay: false,
+      showAlert: false,
     }
     this.handleSubmit = this.handleSubmit.bind(this)
   }
@@ -47,30 +49,32 @@ export class AddJob extends React.Component {
       notes: this.state.notes
     };
     this.props.dispatch(postJob(this.props.authToken,jobObj));
+    this.clearForm(event);
+    this.showAlert();
 
-    this.setState ({
-      job: "",
-      company: "",
-      stage: "",
-      status: "",
-      date: "",
-      comp: "",
-      pros: "",
-      cons: "",
-      validateDisplay: false
+    setTimeout(this.closeAlert.bind(this), 2000);
+
+  }
+
+  showAlert() {
+    this.setState({
+      showAlert: true
     })
+  }
 
-   
-
-  };
-
-  // showValidator() {
-  //   this.setState({
-  //     validateDisplay: !this.state.validateDisplay
-  //   })
-  // }
+  closeAlert() {
+    this.setState({
+      showAlert: false
+    })
+  }
 
 
+  clearForm(e){
+    // e.target.reset();
+    console.log('this event?',e);
+    this.refs.form.reset();
+
+  }
 
 
   render() {
@@ -84,9 +88,15 @@ export class AddJob extends React.Component {
 
     return (
       <div className="job add">
+        <Alert
+          display={this.state.showAlert}
+          el="Job Added!"
+          requestClose={this.closeAlert.bind(this)}
+        />
         <form
           className={styles.formBox}
           onSubmit={this.handleSubmit}
+          ref="form"
         >
           <h2>Add Job </h2>
 
@@ -225,9 +235,7 @@ export class AddJob extends React.Component {
 
             <button
               className="updatebtn"
-              onClick={() => {
-                this.props.toggleForm();
-              }}
+              onClick={this.clearForm.bind(this)}
             >
               Cancel
             </button>

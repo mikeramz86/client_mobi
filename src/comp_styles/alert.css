@@ -1,0 +1,10 @@
+.alert {
+    margin-top: 80px;
+    width: 500px;
+    height: 250px;
+    background-color: yellow;
+    position: absolute;
+    text-align: center;
+    padding: 25px;
+    left: calc(50% - 250px)
+}
