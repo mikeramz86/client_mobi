@@ -17,6 +17,7 @@ class MainSection extends React.Component {
                         </div>
                     </div>
                     <div className="mainBlock">
+                        <h2 className="mainContent">mobi</h2>
                         <div className="mainContent">You're all in one platform to keep track of what matters the most. You're next Career</div>
                     </div>
                     <div className="mainBlock">
