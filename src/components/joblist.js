@@ -16,9 +16,14 @@ class JobList extends React.Component {
 
   componentDidMount() {
     if (this.props.authToken) {
-      this.props.dispatch(getJobList(this.props.authToken));
+      this.refreshJobList();
     }
 }
+
+  refreshJobList() {
+    this.props.dispatch(getJobList(this.props.authToken));
+
+  }
 
 
   render() {
@@ -26,6 +31,7 @@ class JobList extends React.Component {
       return ( 
       <Job 
         key={job.id}
+        id={job.id}
         company={job.company}
         job={job.job}
         stage={job.stage}
@@ -34,6 +40,8 @@ class JobList extends React.Component {
         comp={job.comp}
         pros={job.pros}
         cons={job.cons}
+        notes={job.notes}
+        refreshJobList={this.refreshJobList.bind(this)}
         />
         
       )

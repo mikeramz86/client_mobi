@@ -15,7 +15,7 @@ export const postJobToList = job => ({
     payload: job
 });
 
-export const postJob = (sendJob, authToken) => dispatch => {
+export const postJob = (authToken, sendJob) => dispatch => {
     // console.log('action postJob working')
     fetch(`${API_BASE_URL}/jobs`, {
         body: JSON.stringify(sendJob),
@@ -63,9 +63,9 @@ export const getJobList = (authToken) => dispatch => {
 
 //-------------------------------------PUT-------------------------------------
 
-export const updateJob = (updateJob, authToken) => dispatch => {
+export const updateJob = (authToken, updateJob) => dispatch => {
     // console.log('action postJob working')
-    fetch(`${API_BASE_URL}/jobs`, {
+    fetch(`${API_BASE_URL}/jobs/${updateJob.id}`, {
         body: JSON.stringify(updateJob),
         method: 'PUT',
         headers: {
@@ -93,10 +93,9 @@ export const updateJobSuccess = data => ({
 
 //-------------------------------------DELETE -------------------------------------
 
-export const deleteJob = (values, authToken, id) => dispatch => {
+export const deleteJob = (authToken, id) => dispatch => {
       fetch(`${API_BASE_URL}/jobs/${id}`, {
         method: "delete",
-        body: JSON.stringify(values),
         headers: {
           "Content-Type": "application/json",
           "Authorization": `Bearer ${authToken}`

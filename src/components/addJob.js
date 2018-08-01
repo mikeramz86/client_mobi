@@ -1,3 +1,4 @@
+
 import React from "react";
 //delete styles and do it straightforward
 import { connect } from 'react-redux';
@@ -19,6 +20,7 @@ export class AddJob extends React.Component {
       comp: "",
       pros: "",
       cons: "",
+      notes:"",
       validateDisplay: false
     }
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -44,8 +46,21 @@ export class AddJob extends React.Component {
       cons: this.state.cons,
       notes: this.state.notes
     };
-    this.props.dispatch(postJob(jobObj,this.props.authToken));
-    
+    this.props.dispatch(postJob(this.props.authToken,jobObj));
+
+    this.setState ({
+      job: "",
+      company: "",
+      stage: "",
+      status: "",
+      date: "",
+      comp: "",
+      pros: "",
+      cons: "",
+      validateDisplay: false
+    })
+
+   
 
   };
 
@@ -59,6 +74,7 @@ export class AddJob extends React.Component {
 
 
   render() {
+    console.log('this set state', this.state);
     // console.log('authToken', this.props.authToken);
     let inputRequired;
     if (this.state.validateDisplay) {
@@ -206,6 +222,7 @@ export class AddJob extends React.Component {
             <button type="submit" className="updatebtn">
               Save
             </button>
+
             <button
               className="updatebtn"
               onClick={() => {

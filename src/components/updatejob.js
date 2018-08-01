@@ -1,23 +1,29 @@
 import React from "react";
-//delete styles and do it straightforward
+import { connect } from 'react-redux';
+
 import styles from "../comp_styles/updatejob.css";
+import { updateJob } from "../actions";
+
+
 
 export class UpdateJob extends React.Component {
 
   constructor(props) {
     super(props)
     this.state = {
-      job: "",
-      company: "",
-      stage: "",
-      status: "",
-      date: "",
-      comp: "",
-      pros: "",
-      cons: "",
+      id: props.id,
+      job: props.job,
+      company: props.company,
+      stage: props.stage,
+      status: props.status,
+      date: props.date,
+      comp: props.comp,
+      pros: props.pros,
+      cons: props.cons,
+      notes: props.notes,
       validateDisplay: false
     }
-    // this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   handleInput(event, key) {
@@ -26,7 +32,17 @@ export class UpdateJob extends React.Component {
     })
   }
 
+  handleSubmit(event) {
+    event.preventDefault()
+    console.log('is this?', this)
+    this.props.dispatch(updateJob(this.props.authToken,this.state));
+    this.props.refreshJobList();
+    this.props.toggleShowDetails();
+
+  };
+
   render() {
+
 
     let inputRequired;
     
@@ -43,17 +59,33 @@ export class UpdateJob extends React.Component {
         >
           <h2>Update Job</h2>
           {inputRequired}
-          <label>Job:</label>
-          <input
-            name="job"
-            type="text"
-            ref={input => (this.textInput = input)}
-            placeholder={this.props.job}
-            className={styles.job}
-            value={this.state.value}
-            onChange={e => this.handleInput(e, "job")}
-            maxLength="25"
-          />
+          <div className={styles.status}>
+            <label>Company:</label>
+            <input
+              name="company"
+              type="text"
+              ref={input => (this.textInput = input)}
+              placeholder=""
+              className={styles.job}
+              value={this.state.company}
+              onChange={e => this.handleInput(e, "company")}
+              maxLength="25"
+            />
+          </div>
+
+          <div className={styles.status}>
+            <label>Job:</label>
+            <input
+              name="job"
+              type="text"
+              ref={input => (this.textInput = input)}
+              placeholder=""
+              className={styles.job}
+              value={this.state.job}
+              onChange={e => this.handleInput(e, "job")}
+              maxLength="25"
+            />
+          </div>
 
           <div className={styles.status}>
             <label>Status:</label>
@@ -61,9 +93,9 @@ export class UpdateJob extends React.Component {
               name="status"
               type="Active"
               ref={input => (this.textInput = input)}
-              placeholder="Active"
+              placeholder=""
               className={styles.INSERT}
-              value={this.state.value}
+              value={this.state.status}
               onChange={e => this.handleInput(e, "status")}
               maxLength="25"
             />
@@ -75,9 +107,9 @@ export class UpdateJob extends React.Component {
               name="stage"
               type="text"
               ref={input => (this.textInput = input)}
-              placeholder="Phone Screen"
+              placeholder=""
               className={styles.INSERT}
-              value={this.state.value}
+              value={this.state.stage}
               onChange={e => this.handleInput(e, "stage")}
               maxLength="25"
             />
@@ -91,7 +123,7 @@ export class UpdateJob extends React.Component {
               ref={input => (this.textInput = input)}
               placeholder="6/19/2018"
               className={styles.INSERT}
-              value={this.state.value}
+              value={this.state.date}
               onChange={e => this.handleInput(e, "date")}
               maxLength="25"
             />
@@ -105,7 +137,7 @@ export class UpdateJob extends React.Component {
               ref={input => (this.textInput = input)}
               placeholder="60k"
               className={styles.INSERT}
-              value={this.state.value}
+              value={this.state.comp}
               onChange={e => this.handleInput(e, "comp")}
               maxLength="25"
             />
@@ -117,9 +149,9 @@ export class UpdateJob extends React.Component {
               name="pros"
               type="text"
               ref={input => (this.textInput = input)}
-              placeholder="good job"
+              placeholder=""
               className={styles.INSERT}
-              value={this.state.value}
+              value={this.state.pros}
               onChange={e => this.handleInput(e, "pros")}
               maxLength="25"
             />
@@ -131,11 +163,25 @@ export class UpdateJob extends React.Component {
               name="cons"
               type="text"
               ref={input => (this.textInput = input)}
-              placeholder="did not stutter"
+              placeholder=""
               className={styles.INSERT}
-              value={this.state.value}
+              value={this.state.cons}
               onChange={e => this.handleInput(e, "cons")}
               maxLength="25"
+            />
+          </div>
+
+          <div className={styles.cons}>
+            <label>notes:</label>
+            <input
+              name="notes"
+              type="text"
+              ref={input => (this.textInput = input)}
+              placeholder=""
+              className={styles.INSERT}
+              value={this.state.notes}
+              onChange={e => this.handleInput(e, "notes")}
+              maxLength="100"
             />
           </div>
 
@@ -159,4 +205,9 @@ export class UpdateJob extends React.Component {
   }
 }
 
-export default UpdateJob;
+const mapStateToProps = state => ({
+  jobs: state.jobs,
+  authToken: state.auth.authToken
+});
+
+export default connect(mapStateToProps)(UpdateJob);
