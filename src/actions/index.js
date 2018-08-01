@@ -8,6 +8,12 @@ export const setJobList = jobs => ({
 });
 
 //-------------------------------------POST -------------------------------------
+export const JOB_POST = 'JOB_POST';
+
+export const postJobToList = job => ({
+    type: JOB_POST,
+    payload: job
+});
 
 export const postJob = (sendJob, authToken) => dispatch => {
     // console.log('action postJob working')
@@ -26,6 +32,9 @@ export const postJob = (sendJob, authToken) => dispatch => {
                 return Promise.reject(res.statusText);
             }
             return res.json();
+        })
+        .then(json => {
+            dispatch(postJobToList(json))
         })
         .catch(error => console.error(error))
 

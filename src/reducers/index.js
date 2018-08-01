@@ -1,7 +1,8 @@
 import {
     JOB_GET,
     DELETE_JOB_SUCCESS,
-    UPDATE_JOB_SUCCESS
+    UPDATE_JOB_SUCCESS,
+    JOB_POST
 
 } from '../actions/index';
 
@@ -11,10 +12,10 @@ const initialState = {
 };
 
 const reducer = (state = initialState, action) => {
-    if (action.type === action.JOB_FETCH) {
+    if (action.type === JOB_POST) {
         return Object.assign({}, state, {
             jobs: [...state.jobs,
-            action.job
+            action.payload
             ]
         });
     }
@@ -47,6 +48,7 @@ const reducer = (state = initialState, action) => {
             jobs: jobsArray
         })
     }
+
 
     return state;
 };
