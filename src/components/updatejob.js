@@ -58,6 +58,8 @@ export class UpdateJob extends React.Component {
           onSubmit={this.handleSubmit}
         >
           <h2>Update Job</h2>
+          <hr/>
+
           {inputRequired}
           <div className={styles.status}>
             <label>Company:</label>

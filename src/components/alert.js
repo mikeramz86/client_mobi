@@ -12,7 +12,7 @@ export class Alert extends React.Component {
             return (
                 <div className="alert">
                     {this.props.el}
-                    <button onClick={this.props.requestClose}>Close</button>
+                    <button className="alertbtn" Click={this.props.requestClose}>Close</button>
                 </div>
             )
         } else {

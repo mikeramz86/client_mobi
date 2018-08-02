@@ -42,7 +42,8 @@ class Job extends React.Component {
       let dateFormat = date.format('M-DD-YYYY') + ` (${ago})`
       return (
         <div className="job">
-          <div className="field"><strong>Company:</strong>     {this.props.company}</div>
+          <div className="field"><h2>Company:   {this.props.company}</h2>  </div>
+          <hr/>
           <div className="field"><strong>Job:</strong> {this.props.job}</div>
           <div className="field"><strong>Stage:</strong> {this.props.stage}</div>
           <div className="field"><strong>Status:</strong> {this.props.status}</div>
