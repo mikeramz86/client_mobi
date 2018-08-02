@@ -235,6 +235,7 @@ export class AddJob extends React.Component {
 
             <button
               className="updatebtn"
+              type="rest"
               onClick={this.clearForm.bind(this)}
             >
               Cancel

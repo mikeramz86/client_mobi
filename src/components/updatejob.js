@@ -195,7 +195,7 @@ export class UpdateJob extends React.Component {
             <button
               className="updatebtn"
               onClick={() => {
-                this.props.toggleForm();
+                this.props.toggleShowDetails();
               }}
             >
               Cancel
