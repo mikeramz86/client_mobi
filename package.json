@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "ajv": "^6.5.1",
+    "babel": "^6.23.0",
+    "hoek": "^5.0.3",
     "jest": "^23.4.1",
     "jwt-decode": "^2.2.0",
     "moment": "^2.22.2",
@@ -12,10 +14,12 @@
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
+    "react-test-renderer": "^16.4.2",
     "reactdom": "^2.0.0",
     "redux": "^4.0.0",
     "redux-form": "^7.4.2",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "webpack": "^4.16.4"
   },
   "scripts": {
     "start": "react-scripts start",
