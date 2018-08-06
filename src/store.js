@@ -3,7 +3,7 @@ import {reducer as formReducer} from 'redux-form';
 
 import thunk from 'redux-thunk';
 
-import {reducer} from './reducers';
+// import {reducer} from './reducers';
 
 import jobreducer from './reducers/index';
 
