@@ -1,6 +1,6 @@
 import React from "react";
 //if i see line 3 its because I should be importing something
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import { Link, Redirect, withRouter } from "react-router-dom";
 import "../comp_styles/navbar.css"
 import { clearAuth } from '../actions/auth';
@@ -14,9 +14,9 @@ class NavBar extends React.Component {
     clearAuthToken();
   }
 
-  renderHome= () => {
+  renderHome = () => {
     if (!this.props.loggedIn) {
-      return <Redirect to='/'/>
+      return <Redirect to='/' />
     }
   }
 
@@ -32,13 +32,16 @@ class NavBar extends React.Component {
       <div className="navContainer">
         {this.renderHome()}
         <Link to="/" className="headerLink">
-          <h1>mobi</h1>
+          <img
+            className="mainIcon"
+            alt="whale icon"
+            src={require("../assets/whale.png")} />
         </Link>
         <nav>
           <div className="navWide">
             <Link className="navLink" to="/login">Login</Link>
-            {/* <Link className="navLink" to="/registration-page">Signup</Link> */}
-              {logOutButton}
+            <Link className="navLink" to="/signup">Signup</Link>
+            {logOutButton}
           </div>
         </nav>
       </div>

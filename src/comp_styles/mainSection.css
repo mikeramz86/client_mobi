@@ -8,7 +8,9 @@
   }
 
   h2 {
-    font-weight: bold
+    font-weight: bold;
+    font-size: 50px;
+    margin-right: 20px;
   }
   
 .mainBlock {
@@ -50,6 +52,10 @@
   
   .iconContain {
     margin: 20px;
+  }
+  .mainBlock {
+    margin: 0;
+    display: grid;
   }
   
 }

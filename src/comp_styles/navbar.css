@@ -40,3 +40,10 @@
     font-family: 'Lato', sans-serif;
 
   }
+
+  .mainIcon {
+    width: 25%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    left: 5;
+  }

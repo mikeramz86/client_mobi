@@ -6,6 +6,7 @@ import Dashboard from './dashboard';
 import NavBar from './navbar';
 import Landing from './landing'
 import LogIn from './login-form';
+import SignUp from './registration-page';
 
 
 
@@ -23,6 +24,7 @@ class App extends Component {
 
             <Route exact path="/dashboard" component={Dashboard} />
             <Route exact path="/login" component={LogIn} />
+            <Route exact path="/signup" component={SignUp}/>
 
 
 

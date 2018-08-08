@@ -24,7 +24,7 @@
 }
 
 .registration-form {
-  border-radius: 1px solid black;
+  /* border-radius: 1px solid black;
   position: flex;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
   top: 60px;
@@ -33,7 +33,18 @@
   background-color: white;
   padding: 75px;
   margin-left: auto;
+  margin-right: auto; */
+  border-radius: 1px solid black;
+  position: absolute;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+  top: 60px;
+  right: 0;
+  height: 350px;
+  background-color: white;
+  padding: 40px;
+  margin-left: auto;
   margin-right: auto;
+  width: 100px;
   
 }
 
@@ -97,7 +108,7 @@
     border-radius: 0 0 0 25px;
   }
   .registration-form {
-    width: 50%;
+    width: 25%;
   }
 }
 

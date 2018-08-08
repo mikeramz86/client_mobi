@@ -6,7 +6,8 @@ import {Link, Redirect} from 'react-router-dom';
 // import RegistrationPage from './components/registration-page';
 import InfoSection from './info';
 import Footer from './footer';
-import MainSection from './mainSection';
+// import MainSection from './mainSection';
+import Hero from './hero';
 
 
 export function Landing(props) {
@@ -17,8 +18,8 @@ export function Landing(props) {
 
     return (
         <div className="home">
-
-            <MainSection/>            
+            <Hero/>
+            {/* <MainSection/> */}
             <InfoSection/>
             <Footer/>
 
