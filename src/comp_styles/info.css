@@ -1,4 +1,4 @@
-.explainSection {
+/* .explainSection {
     width: 100%;
     margin-top: 200px;
     background-color: #F9F871;
@@ -8,7 +8,7 @@
 .explainBlock {
   border-radius: 1px solid black;
   background: white;
-  height: 300px;
+  height: 200px;
   margin: 20px;
   padding: 20px;
   display: flex;
@@ -39,16 +39,16 @@
   
 @media only screen and (min-width: 640px) {
   
-  .introSection {
-      height: 400px;
+  .explainSection {
+      height: 250px;
   }
   
   
-  .choreIcon {
-    height: 128px;
+  .explainIcon {
+    height: 50px;
   }
   
-  .iconContain {
+  .explainContain {
     margin: 20px;
   }
   
@@ -58,14 +58,12 @@
 @media only screen and (min-width: 750px) {
   .explainSection {
       padding: 10px;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-column-gap: 20px;
+      display: flex;
     }
   
   .explainBlock {
       margin: 0;
-      display: grid;
+      display: flex;
     }
   
     .explainIcon {
@@ -83,4 +81,57 @@
       margin-top: -45px;
   
     }
+} */
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+  padding: 0px;
+  text-align: center;
+  margin: 0px;
+
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+  background-color: light grey;
+  border-radius: 5px solid black;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  /* max-width: 300px; */
+
+}
+
+.explainContent {
+  /* padding-left: 100px;
+  padding-right: 50px; */
+
+}
+
+.col:first-child { margin-left: 1; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+/*  GRID OF THREE  */
+.span_3_of_3 { width: 100%; }
+.span_2_of_3 { width: 66.13%; }
+.span_1_of_3 { width: 28%; }
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 1% 0 1% 0%; }
+	.span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 950px) {
+	.col {  margin: 1% 0 1% 0%; }
+	.span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
 }

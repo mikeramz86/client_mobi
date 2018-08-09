@@ -18,7 +18,9 @@ class MainSection extends React.Component {
                         <div className="company2">
                             <p>mobi</p>
                         </div>
-                        <h5>Your all in one platform to keep track of what matters the most. Your next Career</h5>
+                        <div className="herotxt">
+                            <p>Your all in one platform to keep track of what matters the most. Your next Career</p>
+                        </div>
                     </div>
                 </div>
             </div>

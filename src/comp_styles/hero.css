@@ -2,6 +2,7 @@
     background: url("../assets/boat-folding-origami-19678.jpg") 50% no-repeat;
     background-size: cover;
     height: 60vh;
+    width: 100%;
     text-align: center;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -33,3 +34,15 @@
     font-size: 40px;
     font-weight: 900;
 }
+
+.herotxt {
+    font-size: 20px;
+}
+
+
+@media only screen and (max-width: 950px) {
+    .hero-section {
+        width: 100%;
+    }
+}
+
