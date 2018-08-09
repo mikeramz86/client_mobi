@@ -1,7 +1,7 @@
 
 import React from 'react';
 import {connect} from 'react-redux';
-import {Link, Redirect} from 'react-router-dom';
+import { Redirect} from 'react-router-dom';
 
 // import RegistrationPage from './components/registration-page';
 import InfoSection from './info';

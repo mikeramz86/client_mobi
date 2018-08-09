@@ -18,3 +18,5 @@ deploy:
   skip_cleanup: true
   on:
     branch: master
+
+osx_image: xcode9.2
