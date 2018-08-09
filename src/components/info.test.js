@@ -2,7 +2,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Info from './Info';
+import Info from './info';
 import {shallow} from "enzyme";
 import configure from "../setupTests"
 import store from "../store";
