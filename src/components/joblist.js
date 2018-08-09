@@ -1,6 +1,5 @@
 import React from "react";
 import {connect} from 'react-redux'
-import PropTypes from 'prop-types';
 import Job from './job';
 import UpdateJob from './updatejob';
 
@@ -10,9 +9,9 @@ import {getJobList} from '../actions';
 import "../comp_styles/joblist.css"
 
 class JobList extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
 
   componentDidMount() {
     if (this.props.authToken) {
@@ -63,7 +62,6 @@ class JobList extends React.Component {
         
       )
     })
-  console.log('this.props', this.props);
 
     return (
       <div>

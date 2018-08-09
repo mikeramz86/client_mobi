@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../comp_styles/alert.css";
+import "../comp_styles/alert.css";
 
 
 

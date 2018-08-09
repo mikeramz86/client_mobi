@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import HeadBar from './headbar';
 import AddJob from './addJob';
-import Job from './job';
 // import UpdateJob from './updatejob';
 import JobList from './joblist';
 // import Landing from './components/landing';
