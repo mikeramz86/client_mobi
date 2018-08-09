@@ -19,4 +19,3 @@ deploy:
   on:
     branch: master
 
-osx_image: xcode9.2

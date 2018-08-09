@@ -46,22 +46,22 @@ class JobList extends React.Component {
       )
     })
 
-    let updateJobs = this.props.jobs.map(updateJob => {
-      return ( 
-      <UpdateJob 
-        key={updateJob.id}
-        company={updateJob.company}
-        job={updateJob.job}
-        stage={updateJob.stage}
-        status={updateJob.status}
-        date={updateJob.date}
-        comp={updateJob.comp}
-        pros={updateJob.pros}
-        cons={updateJob.cons}
-        />
+    // let updateJobs = this.props.jobs.map(updateJob => {
+    //   return ( 
+    //   <UpdateJob 
+    //     key={updateJob.id}
+    //     company={updateJob.company}
+    //     job={updateJob.job}
+    //     stage={updateJob.stage}
+    //     status={updateJob.status}
+    //     date={updateJob.date}
+    //     comp={updateJob.comp}
+    //     pros={updateJob.pros}
+    //     cons={updateJob.cons}
+    //     />
         
-      )
-    })
+    //   )
+    // })
 
     return (
       <div>
