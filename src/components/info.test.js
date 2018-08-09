@@ -12,7 +12,7 @@ describe("Info", () => {
   it("Renders without crashing", () => {
     shallow(
     <Provider store={store}>
-      <info />
+      <Info />
     </Provider>
     )
   })

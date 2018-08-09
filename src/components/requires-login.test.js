@@ -2,7 +2,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import RequiresLogIn from './requires-logIn';
+import RequiresLogIn from './requires-login';
 import {shallow} from "enzyme";
 import configure from "../setupTests"
 import store from "../store";
