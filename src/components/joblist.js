@@ -49,7 +49,6 @@ class JobList extends React.Component {
     return (
       <div>
         {jobs}
-        {/* {updateJobs} */}
       </div>
     )
   }
