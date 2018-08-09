@@ -1,7 +1,6 @@
 import React from "react";
 import {connect} from 'react-redux'
 import Job from './job';
-import UpdateJob from './updatejob';
 
 
 import {getJobList} from '../actions';
@@ -45,6 +44,7 @@ class JobList extends React.Component {
         
       )
     })
+
 
     return (
       <div>
