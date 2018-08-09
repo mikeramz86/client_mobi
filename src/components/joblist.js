@@ -63,17 +63,6 @@ const mapStateToProps = state => ({
 
 export default connect(mapStateToProps)(JobList);
 
-// JobList.propTypes = {
-//   list: PropTypes.arrayOf(PropTypes.shape({
-//     job: PropTypes.string,
-//     company: PropTypes.string,
-//     stage: PropTypes.string,
-//     status: PropTypes.string,
-//     date: PropTypes.string,
-//     comp: PropTypes.string,
-//     pros: PropTypes.string,
-//     cons: PropTypes.string
-//   })).isRequired
 
 
 
