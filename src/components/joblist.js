@@ -56,7 +56,6 @@ class JobList extends React.Component {
 
 const mapStateToProps = state => ({
   jobs: state.job.jobs,
-  updateJobs: state.job.updateJobs,
   authToken: state.auth.authToken
 
 })
