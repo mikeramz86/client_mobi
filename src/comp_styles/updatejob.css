@@ -27,6 +27,15 @@
     cursor: pointer;
 }
 
+@media only screen and (max-width: 320px) {
+    .job {
+        margin-left: 0;
+        margin-right: 0;
+    }
+  
+    
+}
+
 
 
 /* Add greys to balance use yellow to hover over button */
