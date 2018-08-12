@@ -70,7 +70,7 @@ export class AddJob extends React.Component {
 
 
   clearForm(e){
-    // e.target.reset();
+    e.preventDefault()
     console.log('this event?',e);
     this.refs.form.reset();
 
