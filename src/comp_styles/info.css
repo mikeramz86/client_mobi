@@ -13,9 +13,7 @@
   display: block;
   box-sizing: border-box;
 	float:left;
-	margin: 1% 0 1% 1.6%;
-  background-color: light grey;
-  border-radius: 5px solid black;
+	/* margin: 1% 0 1% 1%; */
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
   padding: 20px;
   /* max-width: 300px; */
@@ -38,8 +36,10 @@
 
 /*  GRID OF THREE  */
 .span_3_of_3 { width: 100%; }
-.span_2_of_3 { width: 66.13%; }
-.span_1_of_3 { width: 28%; }
+.span_2_of_3 { width: 66.66%; }
+.span_1_of_3 { 
+  width: 33.33%; 
+}
 
 /*  GO FULL WIDTH BELOW 480 PIXELS */
 @media only screen and (max-width: 480px) {
@@ -47,7 +47,6 @@
 	.span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
 }
 
-/*  GO FULL WIDTH BELOW 480 PIXELS */
 @media only screen and (max-width: 950px) {
 	.col {  margin: 1% 0 1% 0%; }
 	.span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
