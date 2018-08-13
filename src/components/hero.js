@@ -12,7 +12,7 @@ class MainSection extends React.Component {
                             <p>mobi</p>
                         </div>
                         <div className="herotxt">
-                            <p>Your all in one platform to keep track of what matters the most. Your next Career</p>
+                            <p>Your all in one platform to keep track of what matters the most - your next career.</p>
                         </div>
                     </div>
                 </div>
