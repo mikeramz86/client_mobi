@@ -2,16 +2,12 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import { Redirect} from 'react-router-dom';
-
-// import RegistrationPage from './components/registration-page';
 import InfoSection from './info';
 import Footer from './footer';
-// import MainSection from './mainSection';
 import Hero from './hero';
 
 
 export function Landing(props) {
-    // If we are logged in redirect straight to the user's dashboard
     if (props.loggedIn) {
         return <Redirect to="/dashboard" />;
     }
@@ -19,7 +15,6 @@ export function Landing(props) {
     return (
         <div className="home">
             <Hero/>
-            {/* <MainSection/> */}
             <InfoSection/>
             <Footer/>
 
@@ -33,24 +28,4 @@ const mapStateToProps = state => ({
 
 export default connect(mapStateToProps)(Landing);
 
-
-
-// class Landing extends React.Component {
-//   render() {
-//     return (
-//           <div className="App">
-
-//             <MainSection/>
-            
-//             <InfoSection/>
-
-//             <Footer/>
-
-
-//           </div>
-//     );
-//   }
-// }
-
-// export default Landing;
 

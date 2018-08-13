@@ -16,12 +16,10 @@ export const postJobToList = job => ({
 });
 
 export const postJob = (authToken, sendJob) => dispatch => {
-    // console.log('action postJob working')
     fetch(`${API_BASE_URL}/jobs`, {
         body: JSON.stringify(sendJob),
         method: 'POST',
         headers: {
-            // 'user-agent': 'Mozilla/4.0 MDN Example',
             'content-type': 'application/json',
             Authorization: `Bearer ${authToken}`
 
@@ -64,7 +62,6 @@ export const getJobList = (authToken) => dispatch => {
 //-------------------------------------PUT-------------------------------------
 
 export const updateJob = (authToken, updateJob) => dispatch => {
-    // console.log('action postJob working')
     fetch(`${API_BASE_URL}/jobs/${updateJob.id}`, {
         body: JSON.stringify(updateJob),
         method: 'PUT',

@@ -1,5 +1,4 @@
 import React from "react";
-//if i see line 3 its because I should be importing something
 import {connect} from 'react-redux';
 import { Link } from "react-router-dom";
 import "../comp_styles/navbar.css"
@@ -44,6 +43,4 @@ const mapStateToProps = state => ({
 export default connect(mapStateToProps)(HeadBar);
 
 
-//Mentor Note: Do not commit things that are not working. Instead create a branch instead. Looking into git stash?
 
-//REMEMBER INCREMENTAL WORKS!!!

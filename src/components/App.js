@@ -37,10 +37,4 @@ class App extends Component {
 export default App;
 
 
-//Incremental Process!!!!!!!!!!!!
-// Comment out new code we had work out the part that works
-// Start out with code that works
-// add a line a time
-//if you do know what the code does maybe add a few lines
-
 

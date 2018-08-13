@@ -8,9 +8,6 @@ import {getJobList} from '../actions';
 import "../comp_styles/joblist.css"
 
 class JobList extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  // }
 
   componentDidMount() {
     if (this.props.authToken) {

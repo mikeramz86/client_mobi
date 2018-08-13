@@ -1,6 +1,5 @@
 
 import React from "react";
-//delete styles and do it straightforward
 import { connect } from 'react-redux';
 import styles from "../comp_styles/addJob.css";
 import { postJob } from "../actions";
@@ -71,15 +70,12 @@ export class AddJob extends React.Component {
 
   clearForm(e){
     e.preventDefault()
-    console.log('this event?',e);
     this.refs.form.reset();
 
   }
 
 
   render() {
-    console.log('this set state', this.state);
-    // console.log('authToken', this.props.authToken);
     let inputRequired;
     if (this.state.validateDisplay) {
       inputRequired = <div className="">Required</div>
@@ -252,5 +248,4 @@ const mapStateToProps = state => ({
   authToken: state.auth.authToken
 });
 
-// export default AddJob;
 export default connect(mapStateToProps)(AddJob);

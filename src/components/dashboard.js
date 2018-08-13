@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
 import HeadBar from './headbar';
 import AddJob from './addJob';
-// import UpdateJob from './updatejob';
 import JobList from './joblist';
-// import Landing from './components/landing';
 
-// look at unit 2.1.3
-// becareful with the setting up stage!! follow guide!!
-// need to fix dashboard 7.24.18
 
 
 
