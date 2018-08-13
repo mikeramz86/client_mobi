@@ -191,7 +191,7 @@ export class AddJob extends React.Component {
               className="input"
               value={this.state.value}
               onChange={e => this.handleInput(e, "pros")}
-              maxLength="25"
+              maxLength="200"
             />
           </div>
 
@@ -205,7 +205,7 @@ export class AddJob extends React.Component {
               className="input"
               value={this.state.value}
               onChange={e => this.handleInput(e, "cons")}
-              maxLength="25"
+              maxLength="200"
             />
           </div>
 
@@ -219,7 +219,7 @@ export class AddJob extends React.Component {
               className="input"
               value={this.state.value}
               onChange={e => this.handleInput(e, "notes")}
-              maxLength="25"
+              maxLength="200"
             />
           </div>
 
