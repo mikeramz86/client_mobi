@@ -1,4 +1,4 @@
-# bunky
+# MOBI
 <h1>React Capstone: mobi</h1>
 
 Live Link: <a href="https://mobi.netlify.com/"> mobi </a>
