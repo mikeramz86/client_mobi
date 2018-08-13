@@ -1,8 +1,8 @@
 .job {
     border: 5px solid  grey;
+    box-sizing: border-box;
     padding: 15px;
     margin: 10px;
-    width: 154;
     margin-left: 100px;
     margin-right: 100px;
     border-radius: 8px;
@@ -28,7 +28,7 @@
 }
 
 
-@media only screen and (min-width: 640px) {
+@media only screen and (max-width: 640px) {
     .job {
         margin-left: 0;
         margin-right: 0;
@@ -36,6 +36,16 @@
   
     
 }
+
+@media only screen and (max-width: 440px) {
+    .job {
+        margin-left: 0;
+        margin-right: 0;
+    }
+  
+    
+}
+
 
 @media only screen and (max-width: 320px) {
     .job {
