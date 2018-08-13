@@ -39,3 +39,6 @@ Live Link: <a href="https://mobi.netlify.com/"> mobi </a>
 <p>This app is built to be focused on mobile first design and is able to function in different view ports</p>
 
 <h2>Next Version/Updates</h2>
+<li>Stage Compenents: Being able to select stages to see where each job is in what state of interview</li>
+<li>Connecting to Email and Calendar apps: Get notifications when your next interview is</li>
+<li>Job List: Connecting to Job apps</li>

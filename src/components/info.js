@@ -5,7 +5,7 @@ class InfoSection extends React.Component {
 
     render() {
         return(
-            <div className="section group">
+            <div className="section group" >
                 <div className="col span_1_of_3">
                     <img
                     className="explainIcon"
