@@ -92,15 +92,6 @@
   color: red;
 }
 
-@media only screen and (min-width: 321px) {
-  .loginContain {
-    border-radius: 0 0 0 25px;
-  }
-  .registration-form {
-    width: 25%;
-  }
-}
-
 .closed-button {
   margin-left: 100%;
   text-decoration: none;
@@ -113,4 +104,19 @@
 
 .lobtn {
   margin-top: 10px;
+}
+
+@media only screen and (min-width: 320px) {
+  .loginContain {
+    border-radius: 0 0 0 25px;
+  }
+  .registration-form {
+    width: 25%;
+    padding-right: 100px;
+
+  }
+
+  .closed-button {
+    margin-left: 150px;
+  }
 }
