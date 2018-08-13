@@ -12,7 +12,7 @@ class InfoSection extends React.Component {
                     alt="compass icon"
                     src={require("../assets/compass.png")} />
                     <h4>Navigate</h4>
-                    <div className="explainContent">Mobi allows you to see all the jobs you are actively applying for.</div>
+                    <div className="explainContent">Mobi allows you to see all the jobs you are actively applying for in full detail.</div>
 
                 </div>
                 <div className="col span_1_of_3">
