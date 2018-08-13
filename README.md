@@ -5,7 +5,11 @@ Live Link: <a href="https://mobi.netlify.com/"> mobi </a>
 
 <h2>Images</h2>
 <div>Home Page </div>
-<img src="./public/imgs/home_page.png" alt="Home Page screenshot">
+<img src="./src/assets/header.png" alt="Home Page screenshot">
+<div>Add Job </div>
+<img src="./src/assets/addJob.png" alt="Add Job screenshot">
+<div>Job </div>
+<img src="./src/assets/job.png" alt="Job screenshot">
 
 
 <h2>Summary</h2>
