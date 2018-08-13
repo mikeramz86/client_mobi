@@ -37,7 +37,7 @@ class Dashboard extends Component {
     render() {
         return (
 
-            <div>
+            <div aria-live="polite">
                 <HeadBar />
                 <AddJob 
                     showAlert={this.showAlert.bind(this)}
