@@ -106,7 +106,7 @@
   margin-top: 10px;
 }
 
-@media only screen and (min-width: 320px) {
+@media only screen and (max-width: 440px) {
   .loginContain {
     border-radius: 0 0 0 25px;
   }
