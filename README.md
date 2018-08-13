@@ -24,7 +24,8 @@ Live Link: <a href="https://mobi.netlify.com/"> mobi </a>
 <p> Comments: Adding comments will help you better prepare for the next stages or remind you of important things in your interviews.</p>
 
 <h2> Technology Used</h2>
-<h3>React.js</h3>
+<h3>Front End</h3>
+<li>React.js</li>
 <li> Redux</li>
 <li> CSS3 </li>
 <li>Testing with [Enzyme]<a href="http://airbnb.io/enzyme/docs/api/"></li>
